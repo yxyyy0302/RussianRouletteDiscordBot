@@ -32,6 +32,6 @@ public class Curse implements Command {
     public void execute(SlashCommandInteractionEvent event) {
         OptionMapping o1 = event.getOption("user");
         User user = o1.getAsUser();
-        event.reply("**" + user.getAsMention() + "**, you have been cursed by **" + event.getUser().getAsMention()+ "**.").queue();
+        event.reply(user.getAsMention() + ", you have been cursed by " + event.getUser().getAsMention()+ ".").queue();
     }
 }

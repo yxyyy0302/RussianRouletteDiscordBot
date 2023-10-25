@@ -25,7 +25,7 @@ public class Listeners extends ListenerAdapter implements EventListener {
         System.out.println("Online");
         int numberOfGuilds = event.getJDA().getGuilds().size();
         String activityText = "Over " + numberOfGuilds + " Servers.";
-        event.getJDA().getPresence().setActivity(Activity.playing("Russian Roulette"));
+        event.getJDA().getPresence().setActivity(Activity.watching(activityText));
     }
 
     @Override

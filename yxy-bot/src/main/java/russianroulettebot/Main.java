@@ -18,8 +18,10 @@ public class Main {
         manager.add(new Hello());
         manager.add(new Curse());
         manager.add(new Hbd());
+        manager.add(new WhatsThis());
         manager.add(new Help());
         manager.add(new Rules());
+
 
         jda.addEventListener(new Listeners());
         jda.addEventListener(new RussianRouletteGame());
