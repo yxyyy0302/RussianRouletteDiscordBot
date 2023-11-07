@@ -1,7 +1,7 @@
 # RussianRouletteDiscordBot
 Code for a Discord bot I have developed which allows you to play a Russian Roulette game with the bot.
 
-Invite Link: https://discord.com/api/oauth2/authorize?client_id=1164334029378703450&permissions=8&scope=bot%20applications.commands
+Invite Link for the bot: https://discord.com/api/oauth2/authorize?client_id=1164334029378703450&permissions=8&scope=bot%20applications.commands
 
 I have a list of rules that you can easily access yourself using /rules.
 
