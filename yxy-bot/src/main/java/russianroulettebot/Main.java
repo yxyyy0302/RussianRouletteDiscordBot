@@ -19,9 +19,10 @@ public class Main {
         manager.add(new Curse());
         manager.add(new Hbd());
         manager.add(new WhatsThis());
+        manager.add(new Kill());
+        manager.add(new Bully());
         manager.add(new Help());
         manager.add(new Rules());
-
 
         jda.addEventListener(new Listeners());
         jda.addEventListener(new RussianRouletteGame());

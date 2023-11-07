@@ -1,6 +1,7 @@
 package russianroulettebot;
 
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.MessageBuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.entities.User;
@@ -25,7 +26,7 @@ public class Listeners extends ListenerAdapter implements EventListener {
         System.out.println("Online");
         int numberOfGuilds = event.getJDA().getGuilds().size();
         String activityText = "Over " + numberOfGuilds + " Servers.";
-        event.getJDA().getPresence().setActivity(Activity.watching(activityText));
+        event.getJDA().getPresence().setActivity(Activity.playing("Just Monika."));
     }
 
     @Override
@@ -89,9 +90,9 @@ public class Listeners extends ListenerAdapter implements EventListener {
                             event.replyEmbeds(embedBuilder.build()).queue();
                             return;
                         } else {
+                            game.rotateChamberOne();
                             event.getChannel().sendMessage("The bot has chosen to **fire**." +
                                     "\nThe bot did not fire the bullet. Now it's your turn.").queue();
-                            game.rotateChamberOne();
                             sendFireOrSpinMessage(event.getChannel(), game.getGameStarter());
                         }
                     } else {
@@ -102,9 +103,9 @@ public class Listeners extends ListenerAdapter implements EventListener {
                             event.replyEmbeds(embedBuilder.build()).queue();
                             return;
                         } else {
+                            game.rotateChamberOne();
                             event.getChannel().sendMessage("The bot has chosen to **fire**. " +
                                     "\nThe bot did not fire the bullet. Now it's your turn.").queue();
-                            game.rotateChamberOne();
                             sendFireOrSpinMessage(event.getChannel(), game.getGameStarter());
                         }
                     }
@@ -122,10 +123,10 @@ public class Listeners extends ListenerAdapter implements EventListener {
                     event.replyEmbeds(embedBuilder.build()).queue();
                     return;
                 } else {
+                    game.rotateChamberOne();
                     event.getChannel().sendMessage(event.getUser().getAsMention() + ", you chose to **spin** the gun.\nRandomly Spinning......" +
                             "\nYou fired the gun after spinning.\n" + event.getUser().getAsMention() + ", you survived! The chamber was not " +
                             "loaded. The gun will be passed to the bot now.").queue();
-                    game.rotateChamberOne();
                     Random rd = new Random();
                     int botChoice = rd.nextInt(2);
                     if (botChoice == 1) {
@@ -138,9 +139,9 @@ public class Listeners extends ListenerAdapter implements EventListener {
                             event.replyEmbeds(embedBuilder.build()).queue();
                             return;
                         } else {
+                            game.rotateChamberOne();
                             event.getChannel().sendMessage("The bot has chosen to **fire**." +
                                     "\nThe bot did not fire the bullet. Now it's your turn.").queue();
-                            game.rotateChamberOne();
                             sendFireOrSpinMessage(event.getChannel(), game.getGameStarter());
                         }
                     } else {
@@ -152,12 +153,11 @@ public class Listeners extends ListenerAdapter implements EventListener {
                             event.replyEmbeds(embedBuilder.build()).queue();
                             return;
                         } else {
+                            game.rotateChamberOne();
                             event.getChannel().sendMessage("The bot has chosen to **fire**." +
                                     "\nThe bot did not fire the bullet. Now it's your turn.").queue();
-                            game.rotateChamberOne();
                             sendFireOrSpinMessage(event.getChannel(), game.getGameStarter());
                         }
-
                     }
                 }
             }
