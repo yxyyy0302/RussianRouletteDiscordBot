@@ -9,6 +9,6 @@ The bot currently only allows one user to interact with it at the same time. I r
 
 There are also slash commands that you can use to interact with other discord users. Check them out too! Type /help to see the list of all commands.
 
-About my source code: the russianroulettebot folder contains my main method, a command manager class, a listeners class, and my russian roulette game class. It also has an interface called Command which will be used in my commands folder. The commands folder contains all the slash commands that I have and the classes implement my Command class.
+About my source code: the russianroulettebot folder contains my main method, a command manager class for slash commands, a listeners class for message and button interactions, and my russian roulette game class. It also has an interface called Command which will be used in my commands folder. The commands folder contains all the slash commands that I have and the classes implement my Command class.
 
 Thanks for using the bot!
